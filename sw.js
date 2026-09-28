@@ -1,11 +1,10 @@
-const CACHE = 'lingua-latina-shell-f4b4ef8ad394';
+const CACHE = 'lingua-latina-shell-952da0e8f451';
 const ROOT = new URL('./', self.location.href);
-const PRECACHE = ["./app-icon-512.png","./app-icon.png","./assets/CourseHome-CGaAHkvw.js","./assets/CourseReader-CAksLe5v.js","./assets/Library-CWpH5WOW.js","./assets/QuizRunner-CML2Zjye.js","./assets/Review-T8_HUJY_.js","./assets/Settings-dui9aLr2.js","./assets/audio-Ctdyp5ex.js","./assets/dbWorker-D1J09VfS.js","./assets/gentium-plus-latin-ext-400-normal-BID1L8QP.woff2","./assets/gentium-plus-latin-ext-700-normal-3Uomgn00.woff2","./assets/index-BT0SjCJD.js","./assets/index-BV2VS3uR.css","./assets/noto-sans-kr-korean-400-normal-CmjJz_gz.woff2","./assets/noto-sans-kr-korean-600-normal-DaMZfL7Z.woff2","./assets/noto-serif-kr-korean-400-normal-Vo1gosft.woff2","./assets/noto-serif-kr-korean-600-normal-BzrM9Tn9.woff2","./assets/sqlite3-BVKGSWc-.wasm","./assets/sqlite3-opfs-async-proxy-D_xnb1D8.js","./assets/sqlite3-worker1-d88FnpHp.js","./index.html","./manifest.webmanifest"];
+const PRECACHE = ["./app-icon-512.png","./app-icon.png","./assets/CourseHome-C_NO0jj0.js","./assets/CourseReader-CLfVC-GP.js","./assets/Library-DLjJlP1J.js","./assets/QuizRunner-BeS578DA.js","./assets/Review-BflIE0DZ.js","./assets/Settings-CfTnhAmy.js","./assets/audio-BNqKKG0U.js","./assets/dbWorker-7QRekleo.js","./assets/gentium-plus-latin-ext-400-normal-BID1L8QP.woff2","./assets/gentium-plus-latin-ext-700-normal-3Uomgn00.woff2","./assets/index-BV2VS3uR.css","./assets/index-cWhrFg5A.js","./assets/noto-sans-kr-korean-400-normal-CmjJz_gz.woff2","./assets/noto-sans-kr-korean-600-normal-DaMZfL7Z.woff2","./assets/noto-serif-kr-korean-400-normal-Vo1gosft.woff2","./assets/noto-serif-kr-korean-600-normal-BzrM9Tn9.woff2","./assets/sqlite3-BVKGSWc-.wasm","./assets/sqlite3-opfs-async-proxy-D_xnb1D8.js","./assets/sqlite3-worker1-d88FnpHp.js","./index.html","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE)
-    .then((cache) => cache.addAll(PRECACHE.map((path) => new URL(path, ROOT).href)))
-    .then(() => self.skipWaiting()));
+    .then((cache) => cache.addAll(PRECACHE.map((path) => new URL(path, ROOT).href))));
 });
 
 self.addEventListener('activate', (event) => {
